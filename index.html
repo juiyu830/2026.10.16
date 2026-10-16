@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="清楚整理每日行程與待辦事項的個人儀表板。">
+  <title>日常計畫｜今日安排</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#main" aria-label="日常計畫首頁"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>日常計畫<span class="brand-period">.</span></span></a>
+      <div class="topbar-note"><span class="status-dot"></span> 把今天過得剛剛好</div><div class="avatar" aria-label="個人空間">Y</div>
+    </header>
+    <main id="main">
+      <section class="welcome" aria-labelledby="page-title"><div><p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL DASHBOARD</p><h1 id="page-title">早安，<span class="title-accent">今天也要順順利利。</span></h1><p class="welcome-copy">整理一下思緒，讓每件重要的事都有自己的位置。</p></div><div class="date-card"><span class="date-icon" aria-hidden="true">✳</span><div><span class="date-label">今天是</span><time id="today-date" datetime="">2026年10月16日 星期五</time></div></div></section>
+      <section class="summary-grid" aria-label="今日摘要">
+        <article class="summary-card"><div class="summary-icon calendar-icon" aria-hidden="true">▦</div><div><p>今日行程</p><strong><span id="schedule-count">3</span><small> 項安排</small></strong></div><span class="summary-decoration" aria-hidden="true">01</span></article>
+        <article class="summary-card"><div class="summary-icon check-icon" aria-hidden="true">✓</div><div><p>完成進度</p><strong><span id="progress-count">1 / 3</span><small> 項完成</small></strong></div><span class="summary-decoration" aria-hidden="true">02</span></article>
+        <article class="summary-card"><div class="summary-icon sun-icon" aria-hidden="true">☼</div><div><p>給今天的提醒</p><strong class="focus-message">留一點時間給自己</strong></div><span class="summary-decoration" aria-hidden="true">03</span></article>
+      </section>
+      <div class="content-grid">
+        <section class="panel schedule-panel" aria-labelledby="schedule-heading">
+          <div class="panel-heading"><div><p class="section-kicker">YOUR DAY, AT A GLANCE</p><h2 id="schedule-heading">今日行程 <span class="heading-count" id="schedule-heading-count">03</span></h2></div><span class="panel-date" id="short-date">OCT 16</span></div>
+          <div class="timeline" id="schedule-list" aria-live="polite">
+            <article class="timeline-item"><div class="time-column"><time>09:00</time><span>上午</span></div><span class="timeline-marker marker-lilac" aria-hidden="true"></span><div class="event-card"><div class="event-topline"><span class="event-tag tag-work">工作</span><span class="event-duration">60 分鐘</span></div><h3>每週專案進度會議</h3><p><span class="event-location-icon" aria-hidden="true">⌖</span><span class="event-location">線上會議 · Google Meet</span></p><div class="schedule-actions"><button class="item-edit-button schedule-edit-button" type="button" aria-label="編輯每週專案進度會議">編輯</button><button class="item-delete-button schedule-delete-button" type="button" aria-label="刪除每週專案進度會議">刪除</button></div></div></article>
+            <article class="timeline-item"><div class="time-column"><time>12:30</time><span>中午</span></div><span class="timeline-marker marker-peach" aria-hidden="true"></span><div class="event-card"><div class="event-topline"><span class="event-tag tag-life">生活</span><span class="event-duration">90 分鐘</span></div><h3>和小安吃午餐</h3><p><span class="event-location-icon" aria-hidden="true">⌖</span><span class="event-location">日光咖啡 · 中山區</span></p><div class="schedule-actions"><button class="item-edit-button schedule-edit-button" type="button" aria-label="編輯和小安吃午餐">編輯</button><button class="item-delete-button schedule-delete-button" type="button" aria-label="刪除和小安吃午餐">刪除</button></div></div></article>
+            <article class="timeline-item"><div class="time-column"><time>15:00</time><span>下午</span></div><span class="timeline-marker marker-green" aria-hidden="true"></span><div class="event-card"><div class="event-topline"><span class="event-tag tag-focus">專注</span><span class="event-duration">90 分鐘</span></div><h3>完成品牌提案初稿</h3><p><span class="event-location-icon" aria-hidden="true">⌖</span><span class="event-location">深度工作時間</span></p><div class="schedule-actions"><button class="item-edit-button schedule-edit-button" type="button" aria-label="編輯完成品牌提案初稿">編輯</button><button class="item-delete-button schedule-delete-button" type="button" aria-label="刪除完成品牌提案初稿">刪除</button></div></div></article>
+          </div>
+          <div class="schedule-footer"><span class="footer-sparkle" aria-hidden="true">✳</span> 行程不用塞滿，剛剛好就很好。</div>
+        </section>
+
+        <div class="right-column">
+          <section class="panel todo-panel" aria-labelledby="todo-heading">
+            <div class="panel-heading todo-heading-row"><div><p class="section-kicker">SMALL STEPS, BIG WINS</p><h2 id="todo-heading">待辦清單 <span class="heading-count todo-count">03</span></h2></div><span class="todo-date-label">TODAY</span></div>
+            <div class="todo-list" id="todo-list">
+              <label class="todo-item is-complete"><input type="checkbox" checked><span class="custom-checkbox" aria-hidden="true"><span>✓</span></span><span class="todo-text"><strong>整理本週會議筆記</strong><small>已完成 · 上午 8:30</small></span><span class="todo-status done-status">完成</span><button class="item-edit-button todo-edit-button" type="button" aria-label="編輯整理本週會議筆記">編輯</button></label>
+              <label class="todo-item"><input type="checkbox"><span class="custom-checkbox" aria-hidden="true"><span>✓</span></span><span class="todo-text"><strong>回覆客戶的提案信件</strong><small>預計 15 分鐘</small></span><span class="todo-status pending-status">待處理</span><button class="item-edit-button todo-edit-button" type="button" aria-label="編輯回覆客戶的提案信件">編輯</button></label>
+              <label class="todo-item"><input type="checkbox"><span class="custom-checkbox" aria-hidden="true"><span>✓</span></span><span class="todo-text"><strong>下班前買一束花</strong><small>給家裡添一點顏色</small></span><span class="todo-status pending-status">待處理</span><button class="item-edit-button todo-edit-button" type="button" aria-label="編輯下班前買一束花">編輯</button></label>
+            </div>
+            <div class="todo-progress"><div class="progress-copy"><span>今日完成度</span><strong id="progress-percent">33%</strong></div><div class="progress-track" role="progressbar" aria-label="待辦事項完成度" aria-valuemin="0" aria-valuemax="3" aria-valuenow="1"><span id="progress-bar"></span></div></div>
+          </section>
+          <section class="panel add-panel" aria-labelledby="add-heading">
+            <div class="add-heading"><span class="add-icon" aria-hidden="true">＋</span><div><p class="section-kicker">MAKE ROOM FOR WHAT MATTERS</p><h2 id="add-heading">新增一個行程</h2></div></div>
+            <p class="add-description">把想做的事放進計畫，讓今天更有方向。</p>
+            <form id="schedule-form">
+              <div class="form-row"><label class="form-field">行程名稱<input name="title" type="text" placeholder="例如：和朋友喝咖啡" maxlength="60" required></label><label class="form-field time-field">時間<input name="time" type="time" value="16:00" required></label></div>
+              <div class="form-row"><label class="form-field">地點或備註 <span class="optional-label">選填</span><input name="location" type="text" placeholder="例如：市區咖啡廳" maxlength="80"></label><label class="form-field category-field">類別<select name="category"><option value="work">工作</option><option value="life" selected>生活</option><option value="focus">專注</option></select></label></div>
+              <button class="submit-button" type="submit"><span>＋</span> 加入今日行程 <span class="button-arrow" aria-hidden="true">→</span></button>
+              <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer"><span>一件一件來，就已經很棒了。</span><span>MADE FOR A BETTER DAY <span class="footer-heart">♥</span></span></footer>
+  </div>
+</body>
+</html>
